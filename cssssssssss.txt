@@ -1,0 +1,40 @@
+#include <iostream>
+using namespace std;
+
+#define MAX_LENGTH 100
+
+int main()
+{
+    
+	char name[MAX_LENGTH]={0};
+	int age;
+	int height;
+	char nick[MAX_LENGTH]={0};
+	char hiscl[MAX_LENGTH]={0};
+	int iq;
+	
+	cout<<"Numele si Familia: ";
+	cin.getline(name,MAX_LENGTH);
+	cout<<"Porecla: ";
+	cin.getline(nick,MAX_LENGTH);
+	cout<<"Institutia de invatamint: ";
+	cin.getline(hiscl,MAX_LENGTH);
+	cout<<"Varsta: ";
+	cin>>age;
+	cout<<"Care este Inaltimea ta: ";
+	cin>>height;
+	cout<<"Iq-ul tau: ";
+	cin>>iq;
+
+	
+	cout<<"Numele: "<<name<<endl;
+	cout<<"Porecla: "<<nick<<endl;
+	cout<<"Scoala: "<<hiscl<<endl;
+	cout<<"Varsta: "<<age<<endl;
+	cout<<"Inaltimea: "<<height<<endl;
+	cout<<"IQ: "<<iq<<endl;
+	
+	
+	
+	return 0;
+}
