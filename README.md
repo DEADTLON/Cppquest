@@ -1,69 +1,48 @@
-# Cppquest
+#include <stdio.h>
+#include <math.h>
 
-#include<stdio.h>
+int main() {
+    float x1, x2, px, a, b, c;
+    float x, F;
+    int n;
 
-#include<conio.h>
+    printf("Input x1: ");
+    scanf("%f", &x1);
 
-#include<math.h> int main()
+    printf("Input x2: ");
+    scanf("%f", &x2);
 
-{ float x1,x2,px,a,b,c;
+    printf("Input px: ");
+    scanf("%f", &px);
 
-float x, F; int n;
+    printf("Input a: ");
+    scanf("%f", &a);
 
-// clrscr();
+    printf("Input b: ");
+    scanf("%f", &b);
 
-printf("Input x1 : ");
+    printf("Input c: ");
+    scanf("%f", &c);
 
-scanf("%f", &x1); printf("Input x2 : ");
+    x = x1;
+    n = 0;
 
-scanf("%f", &x2); printf("Input px : ");
+    printf("\nResults:\n");
 
-scanf("%f", &px); printf("Input a :
+    while (x < x2) {
+        n = n + 1;
 
-scanf("%f", &a); printf("Input b:
+        if ((c + b < 0) && (a != 0)) {
+            F = (a * x - c) / (b * b + cos(x));
+        } else if ((c + b > 0) && (a == 0)) {
+            F = (a * x + sin(b * x)) / (b * b + c * x);
+        } else {
+            F = (3 * log(x) + 2 * x) / (a * a + c - b * x);
+        }
 
-scanf("%f", &b);
+        printf("%i: x = %.3f \t F = %.3f \n", n, x, F);
+        x = x + px;
+    }
 
-printf("Input
-
-scanf("%f", &c); x = x1;
-
-n = 0;
-
-printf("\n\t Results: \n"); // puts("\n \t Results: ");
-
-while (x < x2)
-
-n = n + 1;
-
-if((c + b < 0) && (a != 0))
-
-F = (a*a*x - c)/(b*b +cos(x));
-
-} else if ((c + b > 0) && (a == 0))
-
-F = (a*x + sin(b*x))/(b*b +c*x);
-
-} else
-
-");
-
-");
-
-");
-
-כ
-
-:
-
-F = (3*log(x) +2*x)/(a*a +c - b*x);
-
-} printf("%i: x = %.3f \t F = %.3f \n", n,x,F);
-
-x = x + px;
-
-} getch();
-
-return
-
+    return 0;
 }
